@@ -1,6 +1,6 @@
 ====== MagicACL ======
 
-Originally written for [[:web:wiki:classes|automatic class wikis]], the MagicACL dokuwiki plugin allows acl rule generation based on the current namespace/page in the wiki. This works with along with the revamped single sign-on dokuwiki auth plugin which generates dokuwiki group membership to grant access to users automatically based upon various directory/mysql db properties (eg. Class Wiki and personal pages).
+Originally written for our class wikis, the MagicACL dokuwiki plugin allows acl rule generation based on the current namespace/page in the wiki. This is most useful with modified dokuwiki auth modules which generate dokuwiki group membership automatically based upon various directory/mysql db properties (eg. ldap groups become dokuwiki groups become wiki page for that group whose members can view/modify them).
 
 <note warning>
 This plugin depends on patching dokuwiki, if access to media files is to work correctly.
@@ -8,6 +8,9 @@ The patch was submitted to dokuwiki back in 2010 but as of October 2012 they sti
 
 See https://bugs.dokuwiki.org/index.php?do=details&task_id=2103
 </note>
+
+Sorry for the wiki formatting in a readme... the following is ported from our internal
+documentation:
 ===== Configuration =====
 
 Configuration is done in conf/local.php as with all dokuwiki bits.
