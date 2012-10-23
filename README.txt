@@ -1,4 +1,6 @@
 ====== MagicACL ======
+ * @license    GPL 2 (http://www.gnu.org/licenses/gpl.html)
+ * @author     Andy Clayton <clayton@physics.umn.edu>
 
 Originally written for our class wikis, the MagicACL dokuwiki plugin allows acl rule generation based on the current namespace/page in the wiki. This is most useful with modified dokuwiki auth modules which generate dokuwiki group membership automatically based upon various directory/mysql db properties (eg. ldap groups become dokuwiki groups become wiki page for that group whose members can view/modify them).
 
