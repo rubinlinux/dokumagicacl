@@ -1,0 +1,15 @@
+--- dokuwiki-orig/inc/auth.php	2012-01-25 13:39:32.000000000 -0600
++++ dokuwiki/inc/auth.php	2013-01-22 18:19:35.069406000 -0600
+@@ -490,10 +490,12 @@
+ function auth_aclcheck($id,$user,$groups){
+     global $conf;
+     global $AUTH_ACL;
+     global $auth;
+ 
++    trigger_event('CHECK_ACL',$tmp=array(ns => $id, user => $user, groups => $groups));
++
+     // if no ACL is used always return upload rights
+     if(!$conf['useacl']) return AUTH_UPLOAD;
+     if (!$auth) return AUTH_NONE;
+ 
+     //make sure groups is an array
